@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Videos</title>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<style>
+		* {
+		font-family: "Segoe UI", Calibri, Roboto, sans-serif;
+		}
+		body {
+		max-width: 800px;
+		margin: auto;
+		padding: 10px;
+		}
+		.hidden { display:none }
+	</style>
+</head>
+<body>
+	
+	<h1>Videos</h1>
+	<div style="background-color: #ddd; padding: 10px; position:sticky; top:0">
+		<label for="searchBar" style="margin-right: 15px"><strong>Search</strong></label>
+		<input id="searchBar" name="searchBar" type="text" placeholder="Search for videos in this page..." style="width: 90%;" oninput="searchVideo()"></input>
+	</div>
+	
+	<iframe width="709" height="399" src="https://www.youtube.com/embed/w8KQmps-Sog" title="Muse - Uprising [Official Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+	<script>
+		function searchVideo() {
+			let videos = document.querySelectorAll('.videos')
+			let search_query = document.getElementById("searchBar").value;
+			for (var i = 0; i < videos.length; i++) {
+				if(videos[i].getAttribute('title').toLowerCase().includes(search_query.toLowerCase())) {
+					videos[i].classList.remove("hidden");
+				}
+				else
+				{
+					videos[i].classList.add("hidden");
+				}
+			}
+		}
+	</script>
+</body>
+</html>
