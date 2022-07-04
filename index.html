@@ -24,10 +24,12 @@
 	</div>
 	
 	<iframe width="709" height="399" src="https://www.youtube.com/embed/w8KQmps-Sog" title="Muse - Uprising [Official Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="1920" height="929" src="https://www.youtube.com/embed/BPNTC7uZYrI?list=TLGGVzQad-4OLMAwNDA3MjAyMg" title="Coldplay - Up&Up (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_mHWxtaESBpg2TyQJW9cyhxQGaCzN5pSkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	
 	<script>
 		function searchVideo() {
-			let videos = document.querySelectorAll('.videos')
+			let videos = document.querySelectorAll('iframe')
 			let search_query = document.getElementById("searchBar").value;
 			for (var i = 0; i < videos.length; i++) {
 				if(videos[i].getAttribute('title').toLowerCase().includes(search_query.toLowerCase())) {
